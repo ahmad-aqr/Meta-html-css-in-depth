@@ -1,6 +1,6 @@
 body {
 	background-color: whitesmoke;
-	font-family: cursive, 'Markazi Text', serif;
+	font-family: 'Work Sans',cursive, 'Markazi Text', serif;
 	margin: 3rem 5%;
 }
 
@@ -23,26 +23,79 @@ nav ul {
 	text-align: center;
 }
 
+nav {
+	background-color: rgba(73, 94, 87, 255);
+	border-radius: 1rem;
+	padding: 0.05rem;
+	margin: 1rem;
+}
+
 nav li {
 	display: inline-block;
+	margin: 0 2rem;
 }
+
+nav a {
+	color: beige;
+	text-decoration: none;
+	font-size: 2rem;
+}
+
 
 section {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem , 1fr));
+	grid-gap: 2rem;
 }
 
+
 article {
-	flex: 1;
+	padding: 2rem;
+	text-align: center;
+	border-radius: 1rem;
+}
+
+.mainCard{
+	height: 26rem;
+	grid-column: 1/4;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("../images/headCardBG.jpg");
+}
+
+.mainCard p {
+	transition: background-color ease-in 100ms;
+		background: rgba(12,12,12,0.5);
+		border-radius: 2rem;
+		padding: 0.5rem;
+		color: beige;
+		text-align: center;
+		font-size: 3rem;
+		cursor: default;
+	}
+	
+.mainCard p:hover{
+		
+		background: rgba(12,12,12,0.8);
 }
 
 footer {
-	display: flex;
+	display: grid;
+	grid-template-rows: auto;
+  	grid-template-columns: auto auto auto auto auto;
 }
 
-footer div {
-	flex: 1;
+
+
+.fLogo{
+	grid-column: 1 / 2
+}
+
+.fText{
+	grid-column: 2 / 6
 }
 
 #footerLogo {
-	width: 4rem;
+	width: 3rem;
 }
